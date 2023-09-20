@@ -1,0 +1,70 @@
+.mycontainer{
+    // background-color: black;
+    padding: 0;
+    margin: 0;
+    background-image: url('/image/back-image.jpg');
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.go-back{
+    position: absolute;
+    top: 8vh;
+    left: 6vw;
+}
+.mycontainer{
+    width: 100%;
+    height: 100vh;
+    @include flex();
+    .box{
+        border: 1px solid rgba(118, 118, 118, 0.666);
+        border-radius: 5px;
+        width: 60rem;
+        margin: 1rem 1rem 1rem 1rem;
+        grid-gap: 2rem;
+        background-color: rgb(245, 245, 245);
+        padding: 1rem 1rem;
+
+        &__image{
+            @include flex();
+            width: 100%;
+            margin: auto;
+        }
+    }
+    form{
+        width: 90%;
+        @include flex();
+        padding: 1rem 0.5rem;
+        flex-direction: column;
+
+        .choose__one{
+            grid-gap: 3rem;
+            padding: 0.5rem;
+            @include flex();
+            
+            .blue{
+                background-color: rgb(196, 229, 238);
+            }
+            .black{
+                background-color: black;
+            }
+            .white{
+                background-color: white;
+            }
+            .cream{
+                background-color: #fcefd6;
+            }
+        }
+        input{
+            padding: 0.5rem 1rem;
+            width: 100%;
+
+        }
+        
+    }
+}
